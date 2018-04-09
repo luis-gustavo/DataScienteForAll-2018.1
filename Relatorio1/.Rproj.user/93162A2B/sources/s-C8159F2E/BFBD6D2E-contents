@@ -1,0 +1,43 @@
+# Importando biblioteca jsonlite
+library(jsonlite)
+Sys.setlocale("LC_ALL", "pt_PT.utf-8")
+
+# Importando biblioteca dplyr
+library(dplyr)
+
+# Importantando e analisando arquivo unb.perfis.json
+unb_perfis_json <- read_json('unb.perfis.json')
+str(unb_perfis_json)
+summary(unb_perfis_json)
+toJSON(head(unb_perfis_json, 2), pretty = TRUE)
+json_perfis <- toJSON(unb_perfis_json, pretty = TRUE)
+head(json_perfis, 1)
+length(unb_perfis_json)
+
+
+# Importante e analisando arquivo unb.relatorioOrientacao.json
+unb_relatorioOrientacao_json <- read_json('unb.relatorioOrientacao.json')
+str(unb_relatorioOrientacao_json)
+summary(unb_relatorioOrientacao_json)
+
+class(toJSON(head(unb_relatorioOrientacao_json, 1), pretty = TRUE))
+unb_json <- toJSON(unb_relatorioOrientacao_json, pretty = TRUE)
+class(unb_json)
+length(unb_json)
+unb_json
+hea
+unb_relatorioOrientacao_json
+
+# Importantando e analisando arquivo unb.relatorioProducaoBibiografica.json
+unb_relatorioProducaoBibiografica_json <- read_json('unb.relatorioProducaoBibiografica.json')
+str(unb_relatorioProducaoBibiografica_json)
+summary(unb_relatorioProducaoBibiografica_json)
+unb_relatorioProducaoBibiografica_json$ARTIGO_ACEITO
+
+
+
+# Importantando e analisando arquivo bdtd_unb.json
+unb_bdtd_json <- read_json('bdtd_unb.json')
+str(unb_bdtd_json)
+summary(unb_bdtd_json)
+

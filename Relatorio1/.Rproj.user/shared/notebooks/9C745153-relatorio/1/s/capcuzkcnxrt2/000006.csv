@@ -1,0 +1,6 @@
+"0","library(jsonlite)"
+"0","unb_relatorio_plublicao_json <- read_json('unb.relatorioProducaoBibiografica.json')"
+"0","artigos_aceitos <- lapply(unb_relatorio_plublicao_json$ARTIGO_ACEITO, length)"
+"0","anos <- names(artigos_aceitos)"
+"0","numero_de_artigos_aceitos <- artigos_aceitos"
+"0","plot(anos, numero_de_artigos_aceitos)"
